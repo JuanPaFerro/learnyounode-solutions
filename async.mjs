@@ -1,5 +1,5 @@
-const http = require("http");
-const bl = require("bl");
+import http from "http";
+import bl from "bl"
 const urls = [process.argv[2], process.argv[3], process.argv[4]];
 
 let responses = [];

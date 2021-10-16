@@ -2,8 +2,8 @@
 TO CODE IT THAT WAY AND I SUCCEED */
 
 /*
- const http = require("http");
- const BufferList = require("bl");
+ import http from "http";
+ import bl as BufferList from "bl";
  const { Buffer } = require("safe-buffer");
  const url = process.argv[2];
 
@@ -18,17 +18,19 @@ TO CODE IT THAT WAY AND I SUCCEED */
  });
 */
 
-const http = require("http");
-const bl = require("bl");
+import http from "http";
+import bl from "bl";
 const url = process.argv[2];
 
 http.get(url, (res) => {
-  res.pipe(bl((err, data)=>{
-    if (err) {
-      return console.log(err)
-    }
-    data = data.toString()
-    console.log(data.length)
-    console.log(data)
-  }))
+  res.pipe(
+    bl((err, data) => {
+      if (err) {
+        return console.log(err);
+      }
+      data = data.toString();
+      console.log(data.length);
+      console.log(data);
+    })
+  );
 });

@@ -1,4 +1,4 @@
-const myModule = require("./module");
+import myModule from "./module.mjs";
 const route = process.argv[2];
 const extension = process.argv[3];
 

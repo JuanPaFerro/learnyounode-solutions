@@ -1,9 +1,11 @@
-const fs = require("fs");
+import fs from "fs";
 
-module.exports = (route, extension, callback) => {
+function myModule(route, extension, callback) {
   fs.readdir(route, (err, data) => {
     if (err) return callback(err, null);
     let lista = data.filter((e) => e.includes(`.${extension}`));
-    callback(null,lista);
+    callback(null, lista);
   });
-};
+}
+
+export default myModule;
