@@ -1,4 +1,4 @@
-import myModule from "./module.mjs";
+import myModule from "./modular-module.mjs";
 const route = process.argv[2];
 const extension = process.argv[3];
 
