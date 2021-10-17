@@ -1,4 +1,4 @@
-const net = require("net");
+import net from "net";
 
 const PORT = process.argv[2];
 

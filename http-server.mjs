@@ -1,5 +1,5 @@
-const fs = require("fs");
-const http = require("http");
+import fs from "fs";
+import http from "http";
 
 const PORT = process.argv[2];
 const filePath = process.argv[3];
