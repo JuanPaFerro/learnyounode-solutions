@@ -1,4 +1,4 @@
-const http = require("http");
+import http from "http";
 const PORT = process.argv[2];
 
 const map = require("through2-map");
